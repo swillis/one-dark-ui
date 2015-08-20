@@ -26,14 +26,20 @@ module.exports =
 
   activate: (state) ->
     # Handle settings changes
-    atom.config.onDidChange 'one-dark-ui.fontSize', ->
-      setFontSize(atom.config.get('one-dark-ui.fontSize'))
-    atom.config.onDidChange 'one-dark-ui.layoutMode', ->
-      setLayoutMode(atom.config.get('one-dark-ui.layoutMode'))
+    atom.config.onDidChange 'swillis.fontSize', ->
+    atom.config.onDidChange 'swillis.fontSize', ->
+      setFontSize(atom.config.get('swillis.fontSize'))
+      setFontSize(atom.config.get('swillis.fontSize'))
+    atom.config.onDidChange 'swillis.layoutMode', ->
+    atom.config.onDidChange 'swillis.layoutMode', ->
+      setLayoutMode(atom.config.get('swillis.layoutMode'))
+      setLayoutMode(atom.config.get('swillis.layoutMode'))
 
     # Initialize
-    setFontSize(atom.config.get('one-dark-ui.fontSize'))
-    setLayoutMode(atom.config.get('one-dark-ui.layoutMode'))
+    setFontSize(atom.config.get('swillis.fontSize'))
+    setFontSize(atom.config.get('swillis.fontSize'))
+    setLayoutMode(atom.config.get('swillis.layoutMode'))
+    setLayoutMode(atom.config.get('swillis.layoutMode'))
 
   deactivate: ->
     unsetFontSize()
@@ -53,7 +59,8 @@ unsetFontSize = ->
 
 # Layout Mode -----------------------
 setLayoutMode = (layoutMode) ->
-  root.setAttribute('theme-one-dark-ui-layoutmode', layoutMode.toLowerCase())
+  root.setAttribute('theme-swillis-layoutmode', layoutMode.toLowerCase())
+  root.setAttribute('theme-swillis-layoutmode', layoutMode.toLowerCase())
 
 unsetLayoutMode = ->
-  root.removeAttribute('theme-one-dark-ui-layoutmode')
+  root.removeAttribute('theme-swillis-layoutmode')
